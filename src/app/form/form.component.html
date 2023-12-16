@@ -1,0 +1,124 @@
+<div class="container">
+
+  <div class="top-form">
+    <p class="h3 title-form" class="title-form">Driving Cost Calculator</p>
+
+  </div>
+
+  <form #f="ngForm" (ngSubmit) = "onSubmit(f)">
+    <div class="mb-3">
+      <label for="hourRate" class="form-label">Hourly Rate:</label>
+      <input
+ 
+        type="number"
+        class="form-control"
+        id="hourRate"
+        aria-describedby="Hourly Rate"
+        name="hourRate"
+        ngModel
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="minLessonDuration" class="form-label"
+        >Minimum Lesson Duration:</label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="minLessonDuration"
+        aria-describedby="Minimum Lesson Duration"
+        name="minLessonDuration"
+        ngModel
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Number of Lessons per Day:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="lessonPerday"
+        aria-describedby="Number of Lessons per Day"
+        name="lessonPerDay"
+        ngModel
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Numbers of Days Worked Each Week:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="daysWorkedEachWeek"
+        aria-describedby="Numbers of Days Worked Each Week"
+        name="daysWorkedEachWeek"
+        ngModel
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Fuel Cost for Each Lesson:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="fuelCost"
+        aria-describedby="Fuel Cost for Each Lesson"
+        name="fuelCostEachLesson"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Insurance per Month:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="insurancePerMonth"
+        aria-describedby="Insurance per Month"
+        name="insurancePerMonth"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Franchise Fee:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="franchiseFee"
+        aria-describedby="Franchise Fee"
+        name="franchiseFee"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Other Cost Per Month:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="otherCost"
+        aria-describedby="Other Cost"
+        name="otherCostPerMonth"
+        ngModel
+        required
+      />
+    </div>
+
+    <button [disabled] = "!f.valid" type="submit" value="0" class="btn btn-primary">Submit</button>
+  
+
+    <div class="form-bottom">
+        <p class="h3 output">Monthly Net Income: £{{ MonthlyNetIncome }}</p>
+        <p class="h3 output">Weekly Net Income: £{{ WeeklyNetIncome }}</p>
+      </div>
+  </form>
+
+
+
+
+</div>
